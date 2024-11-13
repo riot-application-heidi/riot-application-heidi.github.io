@@ -1,0 +1,217 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Cinzel', serif;
+    color: #e0e0e0;
+    background-color: #0a0a0a;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    width: 8px;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #1a1a1a;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5em 3em;
+    z-index: 1000;
+    text-align: left;
+    font-family: 'Montserrat', sans-serif;
+    color: #ffffff;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2em;
+}
+
+.navbar a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 100;
+    letter-spacing: 0.05em;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #b388ff;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10%;
+    text-align: center;
+    background-color: #0a0a0a;
+    color: #e0e0e0;
+}
+
+/* Hero Section Styling */
+.hero {
+    background: url('./assets/img/hero-background4.jpg') no-repeat center center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    padding-left: 10%;
+}
+
+.hero-text {
+    text-align: left;
+    max-width: 400px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero-name {
+    font-size: 6em;
+    margin-bottom: 0.2em;
+    font-weight: 800;
+    color: #b388ff; /* Violet accent color */
+}
+
+.hero p {
+    font-size: 1.5em;
+    opacity: 0.9;
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 1em;
+    padding: 0.8em 1.5em;
+    background: #b388ff; /* Violet accent color */
+    color: #000000;
+    font-size: 1.2em;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #d1a3ff;
+    color: #000000;
+}
+
+.about, .projects, .contact {
+    background: #0a0a0a;
+}
+.projects {
+    background: #0a0a0a;
+}
+
+.projects h2 {
+    font-size: 3em;
+    margin-bottom: 1em;
+    font-weight: 700;
+    color: #b388ff;
+}
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5em;
+    padding: 1em;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5em;
+    color: #e0e0e0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.card h3 {
+    font-size: 1.3em;
+    font-weight: 600;
+    color: #b388ff;
+    margin-bottom: 0.5em;
+}
+
+.card p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+
+.about h2, .projects h2, .contact h2 {
+    font-size: 3em;
+    margin-bottom: 1em;
+    font-weight: 700;
+    color: #b388ff;
+}
+
+.about p, .projects p, .contact p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+.contact-links {
+    display: flex;
+    gap: 2em;
+    margin-top: 1em;
+}
+
+.icon {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    padding: 0.6em 1.2em;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.icon.email:hover, .icon.github:hover, .icon.linkedin:hover {
+    background-color: #b388ff;
+    color: #000000;
+    transform: translateY(-3px);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

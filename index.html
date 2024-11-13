@@ -1,1 +1,82 @@
-Hello World
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Montserrat:wght@100;800&display=swap" rel="stylesheet">
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar">
+    <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+
+<!-- Hero Section -->
+<section id="hero" class="section hero">
+    <div class="overlay">
+        <div class="hero-text">
+            <h1 class="hero-name">Heidi Albarazi</h1>
+            <p>Software Developer | Designer</p>
+            <a href="#about" class="cta-button">Explore More</a>
+        </div>
+    </div>
+</section>
+
+<!-- About Section -->
+<section id="about" class="section about">
+    <h2>About Me</h2>
+    <p>I'm a computer science student at Technical University of Munich. I'm very creative and also very passionate about gaming, programming and league of legends. </p>
+</section>
+
+
+<!-- Projects Section -->
+<section id="projects" class="section projects">
+    <h2>Hackathon Projects</h2>
+    <div class="project-cards">
+        <div class="card">
+            <h3>Planetarium Hackathon Bochum</h3>
+            <p>I won 1st place by developing an AR escape game using the dome of the planetarium. </p>
+        </div>
+        <div class="card">
+            <h3>HackaTUM</h3>
+            <p>I won 2nd place by developing an iOS App/ Game where users can attach notes to buildings and therefore strengthen the community in munich and tell interesting stories. </p>
+        </div>
+        <div class="card">
+            <h3>Start Sport Hackathon</h3>
+            <p>I won 2nd place by building a robotic arm using cardboard and an arduino, that moves when thinking about moving an arm. We used EEG data for that.</p>
+        </div>
+    </div>
+</section>
+
+
+<!-- Contact Section -->
+<section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <div class="contact-links">
+        <a href="mailto:heidialbarazi2306@gmail.com" class="icon email">Email</a>
+        <a href="https://github.com/wedalb" class="icon github">GitHub</a>
+        <a href="https://www.linkedin.com/in/heidi-a-2a046a165/" class="icon linkedin">LinkedIn</a>
+    </div>
+</section>
+
+<!-- Smooth Scroll Script -->
+<script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+</body>
+</html>
